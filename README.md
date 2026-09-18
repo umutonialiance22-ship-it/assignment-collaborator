@@ -1,12 +1,15 @@
+Merging
 
+Merging combines the history of one branch into another.
 
-6.ckeck status and shows staged,unstaged and untracked files:
-git status
-7.to track all the file which is untracked use this command:
-git add file.txt          # stage a specific file
-git add .                 # stage everything in current directory
-git add -A                # stage everything in the whole repo
-git add -p                # interactively stage hunks (partial file changes)
-8.commit changes :
-git commit -m "anything you want to be available in your github"
+bash
+git checkout main
+git pull origin main
+git merge <branch-name>
+git push origin main
+
+Two common outcomes:
+
+Fast-forward merge — if no one else changed main, Git just moves the pointer forward. No conflict.
+Merge conflict — if both branches edited the same lines, Git stops and asks you to resolve it manually (see next section).
 
