@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 BRANCHING GIT AND GITHUB COMMAND 
 even if base command and an advanced command 
 # List branches
@@ -18,7 +19,4 @@ git switch -c feature/login
 
 # Rename current branch
 git branch -m new-name
-
-# Delete a branch
-git branch -d feature/login    # safe delete (merged only)
-git branch -D feature/login    # force delete
+=======
