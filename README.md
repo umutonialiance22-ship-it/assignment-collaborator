@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 BRANCHING GIT AND GITHUB COMMAND 
 even if base command and an advanced command 
 # List branches
@@ -19,4 +18,4 @@ git switch -c feature/login
 
 # Rename current branch
 git branch -m new-name
-=======
+
