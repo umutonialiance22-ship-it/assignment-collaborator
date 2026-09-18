@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Resolving Merge Conflicts
 
 When Git can't automatically reconcile two versions of the same lines, it marks the file like this:
