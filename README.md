@@ -1,56 +1,24 @@
-2. Configuration
+BRANCHING GIT AND GITHUB COMMAND 
+even if base command and an advanced command 
+# List branches
+git branch                 # local
+git branch -r              # remote
+git branch -a              # all
 
-Before using Git, configure your identity and preferences.
+# Create a new branch
+git branch feature/login
 
-bash
-# Set your name and email (used in every commit)
-git config --global user.name "Your Name"
-git config --global user.email "you@example.com"
+# Switch to a branch
+git checkout feature/login
+git switch feature/login   # modern alternative
 
-# Set default branch name for new repos
-git config --global init.defaultBranch main
+# Create and switch in one step
+git checkout -b feature/login
+git switch -c feature/login
 
-# Set default editor
-git config --global core.editor "code --wait"
+# Rename current branch
+git branch -m new-name
 
-# Enable colored output
-git config --global color.ui auto
-
-# View all configuration settings
-git config --list
-
-# View a specific setting
-git config user.name
-
-Use case: Run these once per machine (or per repo with --local instead of --global) so every commit is properly attributed to you.
-
-3. Getting Started
-Initialize a repository
-bash
-git init
-
-Creates a new Git repository in the current directory.
-
-Clone an existing repository
-bash
-git clone https://github.com/user/repo.git
-git clone https://github.com/user/repo.git my-folder-name
-git clone --depth 1 https://github.com/user/repo.git   # shallow clone (faster, less history)
-
-Use case: Shallow clones are useful in CI/CD pipelines where you only need the latest snapshot, not full history.
-4. initializing repository 
-git init 
-5. clone an existing repository :
-git clone https://github.com/user/repo.git
-git clone https://github.com/user/repo.git my-folder-name
-git clone --depth 1 https://github.com/user/repo.git   # shallow clone (faster, less history)
-6.ckeck status and shows staged,unstaged and untracked files:
-git status
-7.to track all the file which is untracked use this command:
-git add file.txt          # stage a specific file
-git add .                 # stage everything in current directory
-git add -A                # stage everything in the whole repo
-git add -p                # interactively stage hunks (partial file changes)
-8.commit changes :
-git commit -m "anything you want to be available in your github"
-
+# Delete a branch
+git branch -d feature/login    # safe delete (merged only)
+git branch -D feature/login    # force delete
